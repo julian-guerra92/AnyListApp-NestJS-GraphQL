@@ -69,7 +69,18 @@ import { ListItemModule } from './list-item/list-item.module';
   controllers: [],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(){
+    console.log('host:', process.env.STATE);
+    console.log('host:', process.env.DB_HOST);
+    console.log('port:', +process.env.DB_PORT);
+    console.log('username:', process.env.DB_USERNAME);
+    console.log('password:', process.env.DB_PASSWORD);
+    console.log('database:', process.env.DB_NAME);
+  }
+
+ }
 
 /*
 - Para la conexión a la base de datos, tener en cuenta la información despuesta en la documentación de Nest Js: https://docs.nestjs.com/techniques/database
